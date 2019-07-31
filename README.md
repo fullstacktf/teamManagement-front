@@ -1,10 +1,34 @@
-# teamManagement-front
+# crew-manager
 
-#Panel Frontal de Login
-!![alt text](https://github.com/fullstacktf/teamManagement-front/blob/master/img/login.jpg)
+## Project setup
+```
+npm install
+```
 
-#Diseño de Interfaz de Inicio. Resumen de los Próximos eventos + Noticias.
-![alt text](https://github.com/fullstacktf/teamManagement-front/blob/master/img/PaginaPrincipal.jpg)
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-#Diseño del Calendario de los Equipos. Aquí podras ver todos los eventos previstos y hacer modificaciones.
-![alt text](https://github.com/fullstacktf/teamManagement-front/blob/master/img/calendario.jpg)
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Run your tests
+```
+npm run test
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Run your unit tests
+```
+npm run test:unit
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
