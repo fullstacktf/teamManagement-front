@@ -1,11 +1,5 @@
 <template>
   <div>
-    <el-row style="padding:0;margin:0px;">
-      <el-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}" :xl="{span: 24}" style="padding:0;margin:0px;">
-        <alert-list />
-      </el-col>
-    </el-row>
-
     <el-row :gutter="8" class="panel-editor-container">
       <el-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 8}" :xl="{span: 8}" style="padding-right:8px;margin-bottom:30px;">
         <el-row style="margin-bottom: 30px;">
@@ -25,7 +19,6 @@
 <script>
 import MatchesTable from './components/MatchesTable'
 import TransactionTable from './components/TransactionTable'
-import AlertList from './components/AlertList'
 import BoxCard from './components/BoxCard'
 
 const lineChartData = {
@@ -52,7 +45,6 @@ export default {
   components: {
     MatchesTable,
     TransactionTable,
-    AlertList,
     BoxCard
   },
   data() {

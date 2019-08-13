@@ -1,20 +1,23 @@
 <template>
   <el-table :data="list" style="width: 100%;padding-top: 15px;">
-    <el-table-column label="Order_No" min-width="200">
+    <el-table-column label="Fecha" width="195" align="center">
       <template slot-scope="scope">
-        {{ scope.row.order_no | orderNoFilter }}
+        {{ scope.row.timestamp }}
       </template>
     </el-table-column>
-    <el-table-column label="Price" width="195" align="center">
+    <el-table-column label="Partido" min-width="100">
       <template slot-scope="scope">
-        ¥{{ scope.row.price | toThousandFilter }}
+        {{ scope.row.name | orderNoFilter }}
       </template>
     </el-table-column>
-    <el-table-column label="Status" width="100" align="center">
-      <template slot-scope="{row}">
-        <el-tag :type="row.status | statusFilter">
-          {{ row.status }}
-        </el-tag>
+    <el-table-column label="Pabellón" width="195" align="center">
+      <template slot-scope="scope">
+        {{ scope.row.field }}
+      </template>
+    </el-table-column>
+    <el-table-column label="Enlace al partido" width="200" align="center">
+      <template slot-scope="scope">
+        <a class="el-button" :href="scope.row.link">Acceder al partido</a>
       </template>
     </el-table-column>
   </el-table>

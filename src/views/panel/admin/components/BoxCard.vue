@@ -1,38 +1,37 @@
 <template>
   <el-card class="box-card-component" style="margin-left:8px;">
     <div slot="header" class="box-card-header">
-      <img src="https://wpimg.wallstcn.com/e7d23d71-cf19-4b90-a1cc-f56af8c0903d.png">
+      <img src="https://cloud.atanor.dev/apps/files_sharing/publicpreview/RSjB8fdJdZN55yQ?x=1920&y=538&a=true&file=asdfasdfasdf.png">
     </div>
     <div style="position:relative;">
-      <pan-thumb :image="avatar" class="panThumb" />
-      <mallki class-name="mallki-text" text="vue-element-admin" />
-      <div style="padding-top:35px;" class="progress-item">
-        <span>Vue</span>
-        <el-progress :percentage="70" />
-      </div>
-      <div class="progress-item">
-        <span>JavaScript</span>
-        <el-progress :percentage="18" />
-      </div>
-      <div class="progress-item">
-        <span>Css</span>
-        <el-progress :percentage="12" />
-      </div>
-      <div class="progress-item">
-        <span>ESLint</span>
-        <el-progress :percentage="100" status="success" />
-      </div>
+      <ul style="list-style-type: none;">
+        <li>
+          <p><span style="margin-right: 3px;font-weight: bold;">Nombre</span>Carlos</p>
+        </li>
+        <li>
+          <p><span style="margin-right: 3px;font-weight: bold;">Apellidos</span>Aller</p>
+        </li>
+        <li>
+          <p><span style="margin-right: 3px;font-weight: bold;">Código de colegiado</span> 11653</p>
+        </li>
+        <li>
+          <p><span style="margin-right: 3px;font-weight: bold;">Categoría máxima</span> Senior interterritorial</p>
+        </li>
+        <li>
+          <p><span style="margin-right: 3px;font-weight: bold;">Total de partidos</span> 50</p>
+        </li>
+        <li>
+          <p><span style="margin-right: 3px;font-weight: bold;">Estado de informes</span><el-tag el-tag--success="">Correcto</el-tag></p>
+        </li>
+      </ul>
     </div>
   </el-card>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import PanThumb from '@/components/PanThumb'
-import Mallki from '@/components/TextHoverEffect/Mallki'
 
 export default {
-  components: { PanThumb, Mallki },
 
   filters: {
     statusFilter(status) {
