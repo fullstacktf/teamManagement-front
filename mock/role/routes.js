@@ -33,6 +33,19 @@ export const constantRoutes = [
     hidden: true
   },
   {
+    path: '/panel',
+    component: 'layout/Layout',
+    redirect: 'panel',
+    children: [
+      {
+        path: 'panel',
+        component: 'views/panel/index',
+        name: 'Panel',
+        meta: { title: 'Panel', icon: 'panel', affix: true }
+      }
+    ]
+  },
+  {
     path: '',
     component: 'layout/Layout',
     redirect: 'dashboard',
