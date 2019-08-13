@@ -1,19 +1,19 @@
 <template>
-  <li :class="{ completed: todo.done, editing: editing }" class="todo">
+  <li :class="{ completed: alert.done, editing: editing }" class="alert">
     <div class="view">
       <input
-        :checked="todo.done"
+        :checked="alert.done"
         class="toggle"
         type="checkbox"
-        @change="toggleTodo( todo)"
+        @change="toggleAlert( alert)"
       >
-      <label @dblclick="editing = true" v-text="todo.text" />
-      <button class="destroy" @click="deleteTodo( todo )" />
+      <label @dblclick="editing = true" v-text="alert.text" />
+      <button class="destroy" @click="deleteAlert( alert )" />
     </div>
     <input
       v-show="editing"
       v-focus="editing"
-      :value="todo.text"
+      :value="alert.text"
       class="edit"
       @keyup.enter="doneEdit"
       @keyup.esc="cancelEdit"
@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  name: 'Todo',
+  name: 'Alert',
   directives: {
     focus(el, { value }, { context }) {
       if (value) {
@@ -35,7 +35,7 @@ export default {
     }
   },
   props: {
-    todo: {
+    alert: {
       type: Object,
       default: function() {
         return {}
@@ -48,32 +48,32 @@ export default {
     }
   },
   methods: {
-    deleteTodo(todo) {
-      this.$emit('deleteTodo', todo)
+    deleteAlert(alert) {
+      this.$emit('deleteAlert', alert)
     },
-    editTodo({ todo, value }) {
-      this.$emit('editTodo', { todo, value })
+    editAlert({ alert, value }) {
+      this.$emit('editAlert', { alert, value })
     },
-    toggleTodo(todo) {
-      this.$emit('toggleTodo', todo)
+    toggleAlert(alert) {
+      this.$emit('toggleAlert', alert)
     },
     doneEdit(e) {
       const value = e.target.value.trim()
-      const { todo } = this
+      const { alert } = this
       if (!value) {
-        this.deleteTodo({
-          todo
+        this.deleteAlert({
+          alert
         })
       } else if (this.editing) {
-        this.editTodo({
-          todo,
+        this.editAlert({
+          alert,
           value
         })
         this.editing = false
       }
     },
     cancelEdit(e) {
-      e.target.value = this.todo.text
+      e.target.value = this.alert.text
       this.editing = false
     }
   }

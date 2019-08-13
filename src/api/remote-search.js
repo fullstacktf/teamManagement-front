@@ -15,3 +15,11 @@ export function transactionList(query) {
     params: query
   })
 }
+
+export function matchesList(query) {
+  return request({
+    url: '/matches/list',
+    method: 'get',
+    params: query
+  })
+}
