@@ -1,50 +1,66 @@
 <template>
-  <div class="app-container w3-container">
+  <div class="app-container">
     <div class="w3-row">
-      <div class="w3-col l4 m4 s4 w3-center">
-        <img src="@/assets/teams/team-a.png" alt="TEAM A" style="width:auto; height: 250px; padding: 5px;">
-      </div>
-      <div class="w3-col l4 m4 s4 w3-center">
-        <p>VS</p>
-      </div>
-      <div class="w3-col l4 m4 s4 w3-center">
-        <img src="@/assets/teams/team-b.png" alt="TEAM B" style="width:auto; height: 250px; padding: 5px;">
+      <div class="w3-col l12 m12 s12" style="padding: 1em;">
+        <div class="w3-panel w3-card-4" style="padding: 1em;">
+          <div class="w3-cell-row">
+            <div class="w3-cell w3-cell-middle w3-display-container" style="height: 300px; max-width: 1024px;">
+              <div class="w3-col l4 m4 s4 w3-center w3-display-left">
+                <img src="@/assets/teams/team-a.png" alt="TEAM A" style="width:100%; height: auto; padding: 5px;">
+              </div>
+              <div class="w3-col l4 m4 s4 w3-center w3-display-middle">
+                <p>VS</p>
+              </div>
+              <div class="w3-col l4 m4 s4 w3-center w3-display-right">
+                <img src="@/assets/teams/team-b.png" alt="TEAM B" style="width:100%; height: auto; padding: 5px;">
+              </div>
+            </div>
+          </div>
+          <div class="w3-cell-row" style="height: 5em;">
+            <div class="w3-cell w3-cell-middle w3-display-container" style="max-width: 1024px;">
+              <div class="w3-col l4 m4 s4 w3-center w3-display-left">
+                <p>--</p>
+              </div>
+              <div class="w3-col l4 m4 s4 w3-center w3-display-middle">
+                <p>15 de Noviembre de 2019</p>
+              </div>
+              <div class="w3-col l4 m4 s4 w3-center w3-display-right">
+                <p>--</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="w3-row">
-      <div class="w3-col l4 m4 s4 w3-center">
-        <p>--</p>
-      </div>
-      <div class="w3-col l4 m4 s4 w3-center">
-        <p>HOY</p>
-      </div>
-      <div class="w3-col l4 m4 s4 w3-center">
-        <p>--</p>
-      </div>
-    </div>
-    <div class="w3-row">
-      <div class="w3-col l4 m4 s4">
-        <div class="w3-row w3-center">
-          <img src="@/assets/icons/EquipoArbitral.svg" alt="EQUIPO ARBITRAL" onclick="document.getElementById('modal-equipo').style.display='block'" style="width:auto; height: 250px; padding: 5px;">
-        </div>
-        <div class="w3-row w3-center">
-          <button class="w3-button" onclick="document.getElementById('modal-equipo').style.display='block'">Equipo arbitral</button>
+    <div class="w3-row" style="margin-top: 5vh;">
+      <div class="w3-col s12 m6 l4" style="padding: 1em;">
+        <div class="w3-panel w3-card-4 w3-center">
+          <div class="w3-row w3-center" style="padding: 1em;">
+            <img src="@/assets/icons/EquipoArbitral.svg" alt="EQUIPO ARBITRAL" onclick="document.getElementById('modal-equipo').style.display='block'" style="width:50%; height: auto; padding: 5px;">
+          </div>
+          <div class="w3-row w3-center">
+            <button class="w3-button" onclick="document.getElementById('modal-equipo').style.display='block'">Equipo arbitral</button>
+          </div>
         </div>
       </div>
-      <div class="w3-col l4 m4 s4">
-        <div class="w3-row w3-center">
-          <img src="@/assets/icons/Location.svg" alt="PABELLÓN" onclick="document.getElementById('modal-pabellon').style.display='block'" style="width:auto; height: 250px; padding: 5px;">
-        </div>
-        <div class="w3-row w3-center">
-          <button class="w3-button" onclick="document.getElementById('modal-pabellon').style.display='block'">Pabellón</button>
+      <div class="w3-col s12 m6 l4" style="padding: 1em;">
+        <div class="w3-panel w3-card-4 w3-center">
+          <div class="w3-row w3-center" style="padding: 1em;">
+            <img src="@/assets/icons/Location.svg" alt="PABELLÓN" onclick="document.getElementById('modal-pabellon').style.display='block'" style="width:50%; height: auto; padding: 5px;">
+          </div>
+          <div class="w3-row w3-center">
+            <button class="w3-button" onclick="document.getElementById('modal-pabellon').style.display='block'">Pabellón</button>
+          </div>
         </div>
       </div>
-      <div class="w3-col l4 m4 s4">
-        <div class="w3-row w3-center">
-          <img src="@/assets/icons/History.svg" alt="HISTÓRICO" onclick="document.getElementById('modal-historico').style.display='block'" style="width:auto; height: 250px; padding: 5px;">
-        </div>
-        <div class="w3-row w3-center">
-          <button class="w3-button" onclick="document.getElementById('modal-historico').style.display='block'">Histórico</button>
+      <div class="w3-col s12 m12 l4" style="padding: 1em;">
+        <div class="w3-panel w3-card-4 w3-center">
+          <div class="w3-row w3-center" style="padding: 1em;">
+            <img src="@/assets/icons/History.svg" alt="HISTÓRICO" onclick="document.getElementById('modal-historico').style.display='block'" style="width:50%; height: auto; padding: 5px;">
+          </div>
+          <div class="w3-row w3-center">
+            <button class="w3-button" onclick="document.getElementById('modal-historico').style.display='block'">Histórico</button>
+          </div>
         </div>
       </div>
     </div>
@@ -52,24 +68,42 @@
       <div class="w3-modal-content">
         <div class="w3-container">
           <span onclick="document.getElementById('modal-equipo').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-          <p>Some text in the Modal..</p>
-          <p>Some text in the Modal..</p>
+          <img src="@/assets/smoke_and_mirrors/demo01.png" alt="abra kadabra" style="width: 100%; height: auto;">
         </div>
       </div>
     </div><div id="modal-pabellon" class="w3-modal">
       <div class="w3-modal-content">
         <div class="w3-container">
           <span onclick="document.getElementById('modal-pabellon').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-          <p>Some text in the Modal..</p>
-          <p>Some text in the Modal..</p>
+          <img src="@/assets/smoke_and_mirrors/demo02.png" alt="abra kadabra" style="width: 100%; height: auto;">
         </div>
       </div>
     </div><div id="modal-historico" class="w3-modal">
       <div class="w3-modal-content">
         <div class="w3-container">
           <span onclick="document.getElementById('modal-historico').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-          <p>Some text in the Modal..</p>
-          <p>Some text in the Modal..</p>
+          <table class="w3-table w3-striped w3-bordered">
+            <tr>
+              <th>Equipo Local</th>
+              <th>Equipo Visitante</th>
+              <th>Fecha de Juego</th>
+            </tr>
+            <tr>
+              <td>Colegio Nuryana 56</td>
+              <td>Luther King 62</td>
+              <td>14 Agosto 2018</td>
+            </tr>
+            <tr>
+              <td>Luther King 38</td>
+              <td>Colegio Nuryana 40</td>
+              <td>05 Febrero 2019</td>
+            </tr>
+            <tr>
+              <td>Colegio Nuryana 88</td>
+              <td>Luther King 87</td>
+              <td>03 Abril 2019</td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>

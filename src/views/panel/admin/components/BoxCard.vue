@@ -1,7 +1,7 @@
 <template>
   <el-card class="box-card-component" style="margin-left:8px;">
     <div slot="header" class="box-card-header">
-      <img src="https://cloud.atanor.dev/apps/files_sharing/publicpreview/RSjB8fdJdZN55yQ?x=1920&y=538&a=true&file=asdfasdfasdf.png">
+      <img src="@/assets/smoke_and_mirrors/avatar.png">
     </div>
     <div style="position:relative;">
       <ul style="list-style-type: none;">
